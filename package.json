@@ -1,5 +1,5 @@
 {
-  "name": "@mio/react-primitives",
+  "name": "@mio/layout-primitives",
   "version": "0.0.1",
   "homepage": "mio.systems",
   "description": "Mio layout primitives in React form. Designed with WordPress integration in mind.",
