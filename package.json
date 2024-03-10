@@ -1,10 +1,13 @@
 {
-  "name": "@mio/layout-primitives",
+  "name": "@miocss/layout-primitives",
   "version": "0.0.1",
   "homepage": "mio.systems",
   "description": "Mio layout primitives in React form. Designed with WordPress integration in mind.",
   "type": "module",
   "main": "./src/index.ts",
+  "repository": {
+    "url": "https://github.com/fwazeter/mio-layout-primitives"
+  },
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "keywords": [
@@ -57,6 +60,6 @@
     "react-dom": "^18.2.0"
   },
   "files": [
-    "dist/**/*"
+    "dist"
   ]
 }

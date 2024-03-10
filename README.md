@@ -1,3 +1,7 @@
 # React Primitives for Mio CSS
 
-Todo Lol.
+## Installation
+
+```bash
+npm install @miocss/layout-primitives
+```
