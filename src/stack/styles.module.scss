@@ -1,60 +1,13 @@
 @layer primitives {
   .stack {
-    --_v-space: var(--space);
+    --_space: var(--space, var(--space-0, 1.2rem));
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    @layer props {
-      .stack {
-        --_v-space: inherit;
-      }
-
-      & & {
-        --space: inherit;
-        /*   --_vertical-spacing: inherit;
-           --_child_spacing: var(--space);
-           margin-block-start: var(--_vertical-spacing);*/
-      }
-    }
-
+    row-gap: var(--_space);
 
     &:only-child {
       block-size: 100%;
     }
-
-    > * + * {
-      margin-block-start: var(--_v-space);
-    }
-
-    /*var(--_vertical-spacing, var(--_child-spacing));*/
-    /*var(--_child-spacing, var(--_vertical-spacing));*/
-    &[data-toggle] * + * {
-      margin-block-start: var(--_v-space);
-    }
-
-    /*@layer reset {
-      & > & {
-        --_child-spacing: var(--space);
-      }
-    }*/
-
-    /*:is(& > & &, & > &) {
-      --_vertical-spacing: inherit;
-      --_child-spacing: var(--space);
-      margin-block-start: var(--_vertical-spacing);
-    }*/
-    /*& & {
-      --_vertical-spacing: inherit;
-    }*/
-
-    /*& > & {
-      --_vertical-spacing: unset;
-    }*/
-
-
   }
 }
-
-
-

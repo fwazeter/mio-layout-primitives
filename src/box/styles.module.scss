@@ -1,10 +1,10 @@
 @layer primitives {
   .box {
-    --_padding: var(--space, 1rem);
+    --_space: var(--space, var(--space-0, 1rem));
     --_border: var(--border);
     --_color: var(--color-dark);
     --_background: var(--color-light);
-    padding: var(--_padding);
+    padding: var(--_space);
     border: var(--_border) solid;
     outline: var(--_border) solid transparent;
     outline-offset: calc(var(--_border) * -1);

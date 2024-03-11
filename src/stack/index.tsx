@@ -4,20 +4,28 @@ import {StackProps} from "./types.js";
 
 const Stack: React.FC<React.PropsWithChildren<StackProps>> = ({
                                                                   space,
-                                                                  toggle,
+                                                                  splitAfter,
                                                                   tag: Tag = 'div',
                                                                   children,
                                                                   ...props
                                                               }) => {
+    const splitAfterCSS = splitAfter ? `
+        .${styles.stack}[data-split="${splitAfter}"] > :nth-child(${splitAfter}) {
+            margin-block-end: auto;
+        }
+        ` : undefined;
     return (
-        <Tag
-            className={styles.stack}
-            data-space={space ? space : undefined}
-            {...(toggle && {'data-toggle': toggle})}
-            {...props}
-        >
-            {children}
-        </Tag>
+        <>
+            {splitAfterCSS && (<style>{splitAfterCSS}</style>)}
+            <Tag
+                className={styles.stack}
+                data-space={space ? space : undefined}
+                data-split={splitAfter ? splitAfter.toString() : undefined}
+                {...props}
+            >
+                {children}
+            </Tag>
+        </>
     );
 };
 
