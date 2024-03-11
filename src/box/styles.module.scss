@@ -11,13 +11,12 @@
     color: var(--_color);
     background: var(--_background);
 
-    @layer inheritance {
-      & * {
-        --space: var(--space-0, 1rem);
-        --border: invalid;
-        color: inherit;
-      }
+    & * {
+      color: inherit;
     }
   }
 }
+
+
+
 

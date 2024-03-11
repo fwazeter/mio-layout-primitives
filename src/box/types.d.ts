@@ -1,6 +1,5 @@
-import { HTMLProps } from "../../types.js";
+import { HTMLProps, commonStylesAPI } from "../../types.js";
 
-export interface BoxProps extends HTMLProps{
-    space?: string;
+export interface BoxProps extends HTMLProps, commonStylesAPI {
     border?: string;
 }

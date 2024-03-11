@@ -22,7 +22,9 @@
     "type-check:watch": "npm run type-check -- --watch",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "rollup -c",
-    "build": "npm run build:types && npm run build:js"
+    "start:js": "rollup -c -w",
+    "build": "npm run build:types && npm run build:js",
+    "start": "npm run build:types && npm run start:js"
   },
   "author": "Frank Wazeter",
   "license": "MIT",
