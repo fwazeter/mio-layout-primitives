@@ -21,6 +21,8 @@ etc. (https://ericwbailey.website/published/where-do-you-put-spacing-on-design-s
 h & width maybe?
 Svelte: https://svelte.dev/repl/15e37766904046b39d067b7105aacea3?version=3.53.1
 
+Great idea: https://mxstbr.com/thoughts/margin/
+
 ```css
     .row {
     display: flex;
