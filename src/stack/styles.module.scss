@@ -1,13 +1,13 @@
 @layer primitives {
   .stack {
-    --_space: var(--space, var(--space-0, 1.2rem));
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    row-gap: var(--_space);
-
-    &:only-child {
-      block-size: 100%;
-    }
+	--_space:        var(--space, var(--space-0, 1.2rem));
+	display:         flex;
+	flex-direction:  column;
+	justify-content: flex-start;
+	row-gap:         var(--_space);
+	
+	& :only-child {
+	  block-size: 100%;
+	}
   }
 }

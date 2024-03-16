@@ -1,0 +1,14 @@
+@layer primitives {
+  .columns {
+	--_space:  var(--space);
+	--_width:  var(--width, 30rem);
+	display:   flex;
+	flex-wrap: wrap;
+	gap:       var(--_space);
+	
+	> * {
+	  flex-grow:  1;
+	  flex-basis: calc((var(--_width) - 100%) * 999);
+	}
+  }
+}
