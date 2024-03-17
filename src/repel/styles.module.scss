@@ -1,0 +1,31 @@
+/*
+REPEL
+A little layout that pushes items away from each other where
+there is space in the viewport and stacks on small viewports
+
+CUSTOM PROPERTIES AND CONFIGURATION
+--space : This defines the space
+between each item.
+
+--_vertical-align How items should align vertically.
+Can be any acceptable flexbox alignment value.
+*/
+@layer primitives {
+  .repel {
+	--_repel-space:    var(--space, var(--space-0, 1rem));
+	--_vertical-align: var(--vertical-align, center);
+	display:           flex;
+	flex-wrap:         wrap;
+	justify-content:   space-between;
+	align-items:       var(--_vertical-align);
+	gap:               var(--_repel-space);
+	
+	&[data-nowrap] {
+	  flex-wrap: nowrap;
+	}
+  }
+}
+
+
+
+

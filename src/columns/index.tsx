@@ -4,7 +4,7 @@ import {ColumnsProps} from './types.js';
 
 const Columns: React.FC<React.PropsWithChildren<ColumnsProps>> = ({
                                                                       space,
-                                                                      width,
+                                                                      contentWidth,
                                                                       tag: Tag = 'div',
                                                                       children,
                                                                       ...props
@@ -14,7 +14,7 @@ const Columns: React.FC<React.PropsWithChildren<ColumnsProps>> = ({
         <Tag
             className={styles.columns}
             data-space={space ? space : undefined}
-            data-width={width ? width : undefined}
+            data-width={contentWidth ? contentWidth : undefined}
             {...props}
         >
             {children}

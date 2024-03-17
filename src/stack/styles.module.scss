@@ -5,19 +5,18 @@
 	display:         flex;
 	flex-direction:  column;
 	justify-content: flex-start;
-	/* row-gap:         var(--_space); */
 	
 	> * + * {
 	  margin-block-start: var(--_stack-space);
 	}
 	
-	:only-child {
-	  block-size: 100%;
-	}
-	
 	&[data-recursive] :is(* + *) {
 	  --_stack-space:     inherit;
 	  margin-block-start: var(--_stack-space);
+	}
+	
+	&[data-recursive] :only-child {
+	  block-size: 100%;
 	}
 	
 	& > & {

@@ -1,6 +1,12 @@
 @layer primitives {
   .center {
-	
+	--_center-space:  var(--space, var(--space-0, 1rem));
+	--_center-width:  var(--content-width, 65ch);
+	--_center-margin: var(--content-margin, auto);
+	box-sizing:       content-box;
+	margin-inline:    var(--_center-margin);
+	max-inline-size:  var(--_center-width);
+	padding-inline:   var(--_center-space);
   }
 }
 
