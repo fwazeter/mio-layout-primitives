@@ -1,6 +1,6 @@
 {
   "name": "@miocss/layout-primitives",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "mio.systems",
   "description": "Mio layout primitives in React form. Designed with WordPress integration in mind.",
   "type": "module",

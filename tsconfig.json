@@ -3,8 +3,9 @@
     /* Configured Options */
     "target": "ES2022",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "lib": [
-      "ESNext"
-    ],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+	  "ESNext",
+	  "dom"
+	],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     "module": "NodeNext",                                /* Specify what module code is generated. */
     "moduleResolution": "NodeNext",                     /* Specify how TypeScript looks up a file from a given module specifier. */
     "typeRoots": ["./src/**/types.ts"],                                  /* Specify multiple folders that act like './node_modules/@types'. */
@@ -24,7 +25,7 @@
     "skipLibCheck": true,
     "jsx": "react",
     "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
-    "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    "declaration": true                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
   },
   "include": [
     "./src/**/*.ts",

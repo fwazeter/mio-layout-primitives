@@ -9,14 +9,17 @@ const Stack: React.FC<React.PropsWithChildren<StackProps>> = ({
                                                                   children,
                                                                   ...props
                                                               }) => {
-    const splitAfterCSS = splitAfter ? `
+    const splitAfterStyle = `
         .${styles.stack}[data-split="${splitAfter}"] > :nth-child(${splitAfter}) {
             margin-block-end: auto;
         }
-        ` : undefined;
+    `
+    const styleElement = document.createElement('style')
+    styleElement.innerHTML = splitAfterStyle
+
     return (
         <>
-            {splitAfterCSS && (<style>{splitAfterCSS}</style>)}
+            {splitAfter && (document.head.appendChild(styleElement))}
             <Tag
                 className={styles.stack}
                 data-space={space ? space : undefined}
