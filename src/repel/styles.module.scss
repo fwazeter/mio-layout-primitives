@@ -12,16 +12,15 @@ Can be any acceptable flexbox alignment value.
 */
 @layer primitives {
   .repel {
-	--_repel-space:     var(--space, var(--space-0, 1rem));
-	--_align-items:     var(--align-items, center);
-	--_repel-direction: var(--flex-direction, row);
-	--_toggle:          var(--OFF);
-	display:            flex;
-	flex-wrap:          wrap;
-	flex-direction:     var(--_toggle, column);
-	justify-content:    space-between;
-	align-items:        var(--_align-items);
-	gap:                var(--_repel-space);
+	--_repel-space:  var(--space, var(--space-0, 1rem));
+	--_align-items:  var(--align-items, center);
+	--_toggle:       var(--OFF);
+	display:         flex;
+	flex-wrap:       wrap;
+	flex-direction:  var(--_toggle, column);
+	justify-content: space-between;
+	align-items:     var(--_align-items);
+	gap:             var(--_repel-space);
 	
 	&[data-nowrap] {
 	  flex-wrap: nowrap;
