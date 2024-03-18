@@ -1,7 +1,7 @@
 @layer primitives {
   .columns {
 	--_columns-space: var(--space);
-	--_columns-width: var(--content-width, 30rem);
+	--_columns-width: var(--content-width, 40rem);
 	display:          flex;
 	flex-wrap:        wrap;
 	column-gap:       var(--_columns-space);
@@ -10,5 +10,17 @@
 	  flex-grow:  1;
 	  flex-basis: calc((var(--_columns-width) - 100%) * 999);
 	}
+	
+	// This should be separated and configured later.
+	// This version means only items AFTER 3rd are  full width.
+	> :nth-child(n + 4) {
+	  flex-basis: 100%;
+	}
+	
+	// This targets all children AFTER and BEFORE the 3rd item.
+	/* > :nth-last-child(n + 4),
+	> :nth-last-child(n + 4) + * {
+	  flex-basis: 100%;
+	} */
   }
 }

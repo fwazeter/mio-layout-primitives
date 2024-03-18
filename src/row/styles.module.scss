@@ -1,0 +1,22 @@
+/**
+ *  A layout that lets you distribute items with consistent spacing, regardless of their size. Basically cluster.
+ *
+ *  The difference between Row & Columns is that columns acts like a switching element designed for columns of data.
+ *  It also can manipulate the content-width of it's children. Row is less deliberate. This is more the spiritual
+ *  successor to the Stack for horizontal elements.
+ *  -justify: justify-content value for horizontal.
+ *  -align: align-items value for vertical.
+ *  -space: gap.
+ */
+@layer primitives {
+  .row {
+	--_row-space:    var(--space);
+	--_row-justify:  var(--justify-content, flex-start);
+	--_row-align:    var(--_align-items, flex-start);
+	display:         flex;
+	flex-wrap:       wrap;
+	justify-content: var(--_row-justify);
+	align-items:     var(--_row-align);
+	column-gap:      var(--_row-space, var(--space-0, 1rem));
+  }
+}

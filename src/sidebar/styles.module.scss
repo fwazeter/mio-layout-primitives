@@ -1,0 +1,45 @@
+/**
+A layout that allows you to have a flexible main content area
+and a "fixed" width sidebar that sits on the left or right.
+If there is not enough viewport space to fit both the sidebar
+width *and* the main content minimum width, they will stack
+on top of each other
+
+CUSTOM PROPERTIES AND CONFIGURATION
+--gutter (var(--space-size-1)): This defines the space
+between the sidebar and main content.
+
+--sidebar-target-width (20rem): How large the sidebar should be
+
+--sidebar-content-min-width(50%): The minimum size of the main content area
+
+EXCEPTIONS
+.sidebar[data-direction='rtl']: flips the sidebar to be on the right
+ */
+@layer primitives {
+  .sidebar {
+	--_sidebar-space:      var(--space);
+	--_sidebar-width:      var(--sidebar-width, 20rem);
+	--_sidebar-main-width: var(--main-width, 50%);
+	--_sidebar-direction:  var(--OFF);
+	display:               flex;
+	flex-wrap:             wrap;
+	flex-direction:        var(--_sidebar-direction, row-reverse);
+	gap:                   var(--_sidebar-space, var(--space-0, 1rem));
+	
+	> :first-child {
+	  flex-basis: var(--_sidebar-width);
+	  flex-grow:  1;
+	}
+	
+	> :last-child {
+	  flex-basis:      0;
+	  flex-grow:       999;
+	  min-inline-size: var(--_sidebar-main-width);
+	}
+	
+	&[data-direction] {
+	  --_sidebar-direction: var(--ON);
+	}
+  }
+}
