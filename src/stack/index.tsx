@@ -5,6 +5,7 @@ import {StackProps} from "./types.js";
 const Stack: React.FC<React.PropsWithChildren<StackProps>> = ({
                                                                   space,
                                                                   splitAfter,
+                                                                  recursive,
                                                                   tag: Tag = 'div',
                                                                   children,
                                                                   ...props
@@ -24,6 +25,7 @@ const Stack: React.FC<React.PropsWithChildren<StackProps>> = ({
                 className={styles.stack}
                 data-space={space ? space : undefined}
                 data-split={splitAfter ? splitAfter.toString() : undefined}
+                data-recursive={recursive ? true : undefined}
                 {...props}
             >
                 {children}

@@ -10,6 +10,11 @@
 	  margin-block-start: var(--_stack-space);
 	}
 	
+	& > & {
+	  --_inherit:         inherit;
+	  margin-block-start: var(--_inherit);
+	}
+	
 	&[data-recursive] :is(* + *) {
 	  --_stack-space:     inherit;
 	  margin-block-start: var(--_stack-space);
@@ -17,11 +22,6 @@
 	
 	&[data-recursive] :only-child {
 	  block-size: 100%;
-	}
-	
-	& > & {
-	  --_inherit:         inherit;
-	  margin-block-start: var(--_inherit);
 	}
   }
 }

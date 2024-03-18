@@ -4,7 +4,7 @@
 	--_columns-width: var(--content-width, 30rem);
 	display:          flex;
 	flex-wrap:        wrap;
-	gap:              var(--_columns-space);
+	column-gap:       var(--_columns-space);
 	
 	> * {
 	  flex-grow:  1;

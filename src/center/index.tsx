@@ -5,6 +5,7 @@ import {CenterProps} from './types.js';
 const Center: React.FC<React.PropsWithChildren<CenterProps>> = ({
                                                                     space,
                                                                     contentWidth,
+                                                                    intrinsic,
                                                                     tag: Tag = 'div',
                                                                     children,
                                                                     ...props
@@ -15,6 +16,7 @@ const Center: React.FC<React.PropsWithChildren<CenterProps>> = ({
             className={styles.center}
             data-space={space ? space : undefined}
             data-width={contentWidth ? contentWidth : undefined}
+            data-intrinsic={intrinsic ? true : undefined}
             {...props}
         >
             {children}
