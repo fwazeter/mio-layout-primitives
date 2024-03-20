@@ -1,0 +1,28 @@
+@layer primitives {
+  .frame {
+	--_n:            var(--numerator, 16);
+	--_d:            var(--denominator, 9);
+	--_ratio:        var(--aspect-ratio, var(--_n) / var(--_d));
+	aspect-ratio:    var(--_ratio);
+	overflow:        hidden;
+	display:         flex;
+	justify-content: center;
+	align-items:     center;
+	
+	> img,
+	> video {
+	  inline-size: 100%;
+	  block-size:  100%;
+	  object-fit:  cover;
+	}
+	
+	// Move to JS?
+	&[data-ratio='1/1'] {
+	  --aspect-ratio: 1/1;
+	}
+	
+	&[data-ratio='9/16'] {
+	  --aspect-ratio: 9/16;
+	}
+  }
+}

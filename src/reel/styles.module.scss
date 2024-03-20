@@ -1,0 +1,64 @@
+/**
+ * A potential enhancement could be here: https://piccalil.li/blog/solution-006-auto-scrolling-responsive-grid
+ */
+@layer primitives {
+  .reel {
+	--_reel-space:              var(--space, var(--space-0, 1rem));
+	--_item-width:              var(--item-width, auto);
+	--_height:                  var(--height, auto);
+	--_color:                   var(--color-dark, #202124);
+	--_background:              var(--color-light, #f2f2f2);
+	display:                    flex;
+	overflow-x:                 auto;
+	overflow-y:                 hidden;
+	-webkit-overflow-scrolling: auto;
+	gap:                        var(--_reel-space);
+	
+	> * {
+	  flex: 0 0 var(--_item-width);
+	}
+	
+	/* 	> * + * {
+		  margin-inline-start: var(--_reel-space);
+		}
+		 */
+	/* Consider changing this to just use gap property on parent */
+	/* &[data-content-overflows] {
+	  padding-block-end: var(--_reel-space);
+	} */
+	
+	> img, > picture, > figure {
+	  block-size:  100%;
+	  flex-basis:  auto;
+	  inline-size: auto;
+	}
+	
+	&[data-no-scrollbar] {
+	  scrollbar-width: none;
+	  
+	  &::-webkit-scrollbar {
+		display: none;
+	  }
+	}
+	
+	&::-webkit-scrollbar {
+	  block-size: var(--space-0, 1rem);
+	}
+	
+	&::-webkit-scrollbar-track {
+	  background: var(--_background);
+	}
+	
+	&::-webkit-scrollbar-thumb {
+	  background:       var(--_background);
+	  background-image: linear-gradient(
+										var(--_background) 0,
+										var(--_background) 0.25rem,
+										var(--_color) 0.25rem,
+										var(--_color) 0.75rem,
+										var(--_background) 0.75rem
+						);
+	}
+	
+  }
+}

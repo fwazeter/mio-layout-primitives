@@ -1,41 +1,62 @@
 {
   "compilerOptions": {
-    /* Configured Options */
-    "target": "ES2022",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "lib": [
+	/* Configured Options */
+	"target": "ES2022",
+	/* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+	"lib": [
 	  "ESNext",
 	  "dom"
-	],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "module": "NodeNext",                                /* Specify what module code is generated. */
-    "moduleResolution": "NodeNext",                     /* Specify how TypeScript looks up a file from a given module specifier. */
-    "typeRoots": ["./src/**/types.ts"],                                  /* Specify multiple folders that act like './node_modules/@types'. */
-    "resolveJsonModule": true,                        /* Enable importing .json files. */
-    "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
-    "outDir": "./dist",                                   /* Specify an output folder for all emitted files. */
-    "rootDir": "./src",                                  /* Specify the root folder within your source files. */
-    "removeComments": true,                           /* Disable emitting comments. */
-    "newLine": "lf",                                /* Set the newline character for emitting files. */
-    "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
-    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
-    "strict": true,                                      /* Enable all strict type-checking options. */
-    "noUnusedLocals": true,                           /* Enable error reporting when local variables aren't read. */
-    "noFallthroughCasesInSwitch": true,               /* Enable error reporting for fallthrough cases in switch statements. */
-    //"noEmit": true,
-    "skipLibCheck": true,
-    "jsx": "react",
-    "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
-    "declaration": true                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+	],
+	/* Specify a set of bundled library declaration files that describe the target runtime environment. */
+	"module": "ESNext",
+	/* Specify what module code is generated. */
+	"moduleResolution": "node",
+	/* Specify how TypeScript looks up a file from a given module specifier. */
+	"typeRoots": [
+	  "./src/**/types.ts"
+	],
+	/* Specify multiple folders that act like './node_modules/@types'. */
+	"resolveJsonModule": true,
+	/* Enable importing .json files. */
+	"sourceMap": true,
+	/* Create source map files for emitted JavaScript files. */
+	"outDir": "./dist",
+	/* Specify an output folder for all emitted files. */
+	"rootDir": "./src",
+	/* Specify the root folder within your source files. */
+	"removeComments": true,
+	/* Disable emitting comments. */
+	"newLine": "lf",
+	/* Set the newline character for emitting files. */
+	"isolatedModules": true,
+	/* Ensure that each file can be safely transpiled without relying on other imports. */
+	"esModuleInterop": true,
+	/* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+	"forceConsistentCasingInFileNames": true,
+	/* Ensure that casing is correct in imports. */
+	"strict": true,
+	/* Enable all strict type-checking options. */
+	"noUnusedLocals": true,
+	/* Enable error reporting when local variables aren't read. */
+	"noFallthroughCasesInSwitch": true,
+	/* Enable error reporting for fallthrough cases in switch statements. */
+	//"noEmit": true,
+	"skipLibCheck": true,
+	"jsx": "react",
+	"emitDeclarationOnly": true,
+	/* Only output d.ts files and not JavaScript files. */
+	"declaration": true
+	/* Generate .d.ts files from TypeScript and JavaScript files in your project. */
   },
   "include": [
-    "./src/**/*.ts",
-    "./src/**/*.tsx",
-    "./src/**/*.d.ts",
-    "./*.d.ts"
+	"./src/**/*.ts",
+	"./src/**/*.tsx",
+	"./src/**/*.d.ts",
+	"./*.d.ts"
   ],
   "exclude": [
-    "node_modules",
-    "dist"
+	"node_modules",
+	"dist"
   ]
 }
 

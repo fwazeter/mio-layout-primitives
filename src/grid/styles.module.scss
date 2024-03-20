@@ -1,0 +1,31 @@
+@layer primitives {
+  .grid {
+	--_grid-space:         var(--space, var(--space-0, 1rem));
+	--_grid-min-item-size: var(--item-width, 16rem);
+	--_grid-placement:     var(--item-placement, auto-fill);
+	display:               grid;
+	grid-template-columns: repeat( var(--_grid-placement), minmax(var(--_grid-min-item-size), 1fr));
+	gap:                   var(--_grid-space);
+	
+	// The critical part here is the 50vw. Half screen.
+	&[data-layout='2'] {
+	  --item-width: clamp(16rem, 50vw, 33rem);
+	  
+	  &[data-layout='3'] {
+		--item-placement: auto-fit;
+	  }
+	}
+	
+	// 3 column grid
+	&[data-layout='3'] {
+	  --item-width: clamp(16rem, 33%, 20rem);
+	}
+	
+	// 12 column grid
+	&[data-layout='12'] {
+	  grid-template-columns: repeat(12, 1fr);
+	}
+	
+	// Add data-row configure? E.g. masonry.
+  }
+}

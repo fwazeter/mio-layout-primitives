@@ -12,7 +12,7 @@ export default {
 	input: './src/index.ts', // Entry point
 	// Specify here external modules which you don't want to include in your bundle (for instance: 'lodash', 'moment' etc.)
 	// https://rollupjs.org/guide/en/#external
-	external: [ 'react' ],
+	external: [ 'react', 'react-dom' ],
 	output:   {
 		dir:       'dist', // Output to the dist/ directory
 		format:    'esm', // Output as ES module

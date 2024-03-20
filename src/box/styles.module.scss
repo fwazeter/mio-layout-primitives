@@ -2,8 +2,8 @@
   .box {
 	--_box-space:   var(--space, var(--space-0, 1rem));
 	--_border:      var(--border);
-	--_color:       var(--color-dark);
-	--_background:  var(--color-light);
+	--_color:       var(--color-dark, #202124);
+	--_background:  var(--color-light, #fdfeff);
 	padding:        var(--_box-space);
 	border:         var(--_border) solid;
 	outline:        var(--_border) solid transparent;

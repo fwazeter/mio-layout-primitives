@@ -5,3 +5,6 @@ export {default as Columns} from './columns/index.js';
 export {default as Repel} from './repel/index.js';
 export {default as Row} from './row/index.js';
 export {default as SideBar} from './sidebar/index.js';
+export {default as Grid} from './grid/index.js';
+export {default as Frame} from './frame/index.js';
+export {default as Reel} from './reel/index.js';
